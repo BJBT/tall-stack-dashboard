@@ -1,7 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
-    <div class="bg-gray-200 flex flex-col justify-center min-h-screen sm:px-6 lg:px-8">
+    <div class="bg-gray-100 flex flex-col justify-content-cnter min-h-screen sm:px-6 lg:px-8">
         <div class="flex flex-row flex-wrap">
             <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">1</div>
             <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">2</div>
