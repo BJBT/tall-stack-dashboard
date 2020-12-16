@@ -156,7 +156,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608053659763</updated>
-      <workItem from="1608053660823" duration="3537000" />
+      <workItem from="1608053660823" duration="5639000" />
     </task>
     <servers />
   </component>
@@ -164,13 +164,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="500" height="445" key="SwitcherDM" timestamp="1608055948545">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1608132867451">
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608055948545" />
-    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup" timestamp="1608055788339">
+    <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608132867451" />
+    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup" timestamp="1608132851985">
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
-    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608055788339" />
+    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608132851985" />
   </component>
 </project>
