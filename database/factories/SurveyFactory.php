@@ -22,7 +22,7 @@ class SurveyFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->text,
+            'name' => $this->faker->word,
             'ordinality' => $this->faker->numberBetween(1, 40),
             'initial_message' => $this->faker->sentence
         ];

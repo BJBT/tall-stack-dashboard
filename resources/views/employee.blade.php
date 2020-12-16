@@ -12,7 +12,7 @@
                 <thead class="text-sm font-normal text-gray-600 border-b border-gray-200">
                     <tr>
                         <th class="px-4 py-4 text-left">
-                            Store
+                            Full Name
                         </th>
                         <th class="px-4 py-4">
                             Mobile Number
