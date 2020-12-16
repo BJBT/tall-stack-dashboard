@@ -17,6 +17,7 @@ class CreateSurveyQuestionChoicesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('survey_question_id');
             $table->string('name');
+            $table->integer('ordinality')->default(1000);
             $table->timestamps();
 
             $table->foreign('survey_question_id')->references('id')->on('survey_questions')->onDelete('CASCADE');

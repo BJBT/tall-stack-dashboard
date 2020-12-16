@@ -29,8 +29,8 @@
     </div>
     <div class="md:text-md text-md text-gray-800 font-semibold tracking-normal space-x-2">
         <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('dash') }}">Dashboard</a>
-        <a class="hover:bg-gray-50 hover:text-gray-600" href="#">Stores</a>
-        <a class="hover:bg-gray-50 hover:text-gray-600" href="#">Surveys</a>
+        <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('employees.show') }}">Employees</a>
+        <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('surveys.show') }}">Surveys</a>
         <a class="hover:bg-gray-50 hover:text-gray-600" href="#">Coupons</a>
     </div>
 </header>

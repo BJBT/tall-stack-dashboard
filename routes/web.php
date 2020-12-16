@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\SurveysController;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Livewire\Auth\Passwords\Email;
@@ -53,6 +55,10 @@ Route::middleware('auth')->group(function () {
         ->name('verification.verify');
 
     Route::get('/dashboard', [DashController::class, 'index'])->name('dash');
+
+    Route::get('/surveys', [SurveysController::class, 'index'])->name('surveys.show');
+
+    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.show');
 
     Route::post('logout', LogoutController::class)
         ->name('logout');
