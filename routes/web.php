@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ImagePathController;
+use App\Http\Controllers\SurveyQuestionChoicesController;
 use App\Http\Controllers\SurveyQuestionsController;
 use App\Http\Controllers\SurveysController;
 use App\Http\Livewire\Auth\Login;
@@ -70,6 +71,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/survey_questions/{surveyQuestion}/delete', [SurveyQuestionsController::class, 'delete'])->name('question.delete');
 
     Route::get('/question_choices/{surveyQuestion}', [SurveyQuestionsController::class, 'show'])->name('choices.show');
+
+    Route::post('/question_choices/{surveyQuestion}', [SurveyQuestionChoicesController::class, 'store'])->name('choice.create');
+    Route::post('/question_choices/{surveyQuestion}/update', [SurveyQuestionChoicesController::class, 'update'])->name('choice.update');
+    Route::get('/question_choices/{surveyQuestionChoice}/delete', [SurveyQuestionChoicesController::class, 'delete'])->name('choice.delete');
+
 
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.show');
 

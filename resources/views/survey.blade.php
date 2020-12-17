@@ -82,7 +82,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ Form::submit('Update',['class'=>'uppercase bg-gray-500 text-white py-2 px-4 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::submit('Update',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
             {{ Form::close() }}
         </div>
         <hr>
@@ -117,7 +117,7 @@
                        name="image_url"
                        type="file">
             </div>
-            {{ Form::submit('Add',['class'=>'uppercase bg-gray-500 text-white py-2 px-4 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::submit('Add',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
             {{ Form::close() }}
         </div>
     </div>

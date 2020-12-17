@@ -91,7 +91,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ Form::submit('Update Questions',['class'=>'uppercase bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::submit('Update Questions',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
             {{ Form::close() }}
         </div>
         <hr>
@@ -116,7 +116,7 @@
                        name="ordinality"
                        placeholder="Question Ordinality">
             </div>
-            {{ Form::submit('Add',['class'=>'uppercase bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::submit('Add',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
             {{ Form::close() }}
         </div>
     </div>
