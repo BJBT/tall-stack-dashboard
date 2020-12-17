@@ -1,26 +1,103 @@
 @extends('layouts.app')
 @section('content')
-    <div class="bg-gray-100 flex flex-col justify-content-cnter min-h-screen sm:px-6 lg:px-8">
-        <div class="flex flex-row flex-wrap">
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">1</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">2</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">3</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">4</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">5</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">6</div>
-        </div>
-        <div class="card col-1 flex items-center justify-center">
-            <div class="flex flex-col md:flex-row py-2 px-2 space-y-10 justify-content-center">
-                <div class="bg-gray-600 shadow-lg rounded-lg md:mx-2 py-2 px-2 space-y-8">
-                    <a href="{{ route('home') }}">
-                        <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
-                    </a>
+    <style>
+        ul.breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+        }
 
-                    <h1 class="text-5xl font-extrabold tracking-wider text-center text-gray-400">
-                        Tall Dashboard
-                    </h1>
-                </div>
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 14px;
+        }
+
+        ul.breadcrumb li + li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+    </style>
+    <div class="overflow-auto bg-gray-200">
+        <ul class="breadcrumb bg-gray-300">
+            <li class="text-orange-500 hover:text-opacity-75"><a href="{{ route('surveys.show') }}">Surveys</a></li>
+            <li class="text-orange-500 hover:text-opacity-75"><a href="{{ route('questions.show', $survey) }}">Survey Questions</a></li>
+            <li class="text-gray-900">{{ $surveyQuestion->name }} - Question Choices</li>
+        </ul>
+        <hr>
+        <div class="flex flex-col bg-white rounded-md shadow-md mb-10 mt-8 mx-8 p-8 overflow-x-auto">
+            <div class="w-full px-4 flex-1 border-b border-gray-200 flex items-end justify-between">
+                <h4 class="flex items-center font-semibold text-gray-900 text-xl py-4">
+                    <span class="mr-2">Question Choices</span>
+                </h4>
             </div>
+{{--            {{ Form::open(['url'=>route('questionchoices.update', $surveyQuestion)]) }}--}}
+            <table class="table-auto w-full">
+                <thead class="text-sm font-normal text-gray-600 border-b border-gray-200">
+                    <tr>
+                        <th class="px-4 py-4 text-left">
+                            Name
+                        </th>
+                        <th class="px-4 py-4 text-left">
+                            Ordinality
+                        </th>
+                        <th class="px-4 py-4 text-left">
+                            Delete
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($surveyQuestion->choices->sortBy('ordinality') as $choice)
+                        <tr @if(! $loop->last)
+                            class="border-t border-gray-200 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300"
+                            @else
+                            class="text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300"
+                                @endif>
+                            <td class="px-4 py-4">
+                                <textarea class="text-left md:w-2/4 h-20 bg-gray-100 border border-gray-300 rounded-md p-2"
+                                          name="choices[{{$choice->id}}][name]"
+                                          type="textarea">{{ $choice->name }}</textarea>
+                            </td>
+                            <td class="px-4 py-4">
+                                <input class="bg-white border border-gray-300 rounded-md p-2"
+                                       name="choices[{{$choice->id}}][ordinality]"
+                                       type="text"
+                                       value="{{ $choice->ordinality }}">
+                            </td>
+                            <td class="px-4 py-4">
+{{--                                <a id="Remove"--}}
+{{--                                   class="text-red-600 text-bold"--}}
+{{--                                   href="{{ route('superadmin.survey.destroy_choice', $choice) }}">Remove</a>--}}
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{ Form::submit('Update Choices',['class'=>'uppercase bg-tangerine text-white py-2 px-4 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::close() }}
         </div>
+        <hr>
+{{--        <div class="flex flex-col bg-white rounded-md shadow-md mb-10 mt-8 mx-8 p-8">--}}
+{{--            <div class="w-full px-4 flex-1 border-b border-gray-200 flex items-end justify-between">--}}
+{{--                <h5 class="flex items-center font-semibold text-gray-900 text-xl py-4">--}}
+{{--                    <span class="mr-2">Add A New Choice</span>--}}
+{{--                </h5>--}}
+{{--            </div>--}}
+{{--            {{ Form::open(['url'=>route('superadmin.survey.add_choice', $surveyQuestion)]) }}--}}
+{{--            <div>--}}
+{{--                <textarea class="text-md text-gray-600 mb-10 h-20 w-full bg-gray-100 border border-gray-300 rounded-md p-4"--}}
+{{--                          name="name"--}}
+{{--                          placeholder="Name Of New Choice"></textarea>--}}
+{{--            </div>--}}
+{{--            <div>--}}
+{{--                <input class="text-md text-gray-600 mb-10 h-10 w-10 bg-white border border-gray-300 w-full rounded-md p-4"--}}
+{{--                       name="ordinality"--}}
+{{--                       placeholder="Ordinality Of New Choice"--}}
+{{--                >--}}
+{{--            </div>--}}
+{{--            {{ Form::submit('Add',['class'=>'uppercase bg-tangerine text-white py-2 px-4 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}--}}
+{{--            {{ Form::close() }}--}}
+{{--        </div>--}}
     </div>
-@endsection
+@stop
+@push('scripts')
+@endpush

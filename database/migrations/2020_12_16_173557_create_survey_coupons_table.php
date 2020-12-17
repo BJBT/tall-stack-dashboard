@@ -15,6 +15,10 @@ class CreateSurveyCouponsTable extends Migration
     {
         Schema::create('survey_coupons', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->string('code');
+            $table->string('image_url');
             $table->timestamps();
         });
     }

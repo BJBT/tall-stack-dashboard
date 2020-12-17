@@ -164,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608053659763</updated>
-      <workItem from="1608053660823" duration="16205000" />
+      <workItem from="1608053660823" duration="25015000" />
     </task>
     <servers />
   </component>
@@ -172,21 +172,25 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="809" y="-885" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608230051137">
+      <screen x="-625" y="-1057" width="2560" height="1057" />
+    </state>
+    <state x="809" y="-885" key="#com.intellij.execution.impl.EditConfigurationsDialog/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608230051137" />
     <state x="981" y="-785" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608144461902">
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
     <state x="981" y="-785" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608144461902" />
-    <state x="914" y="-806" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608143067576">
+    <state x="914" y="-806" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608223448154">
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
-    <state x="914" y="-806" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608143067575" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1608147899207">
+    <state x="914" y="-806" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608223448154" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1608230735161">
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608147899207" />
-    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup" timestamp="1608141520662">
+    <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608230735161" />
+    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup" timestamp="1608223640616">
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
-    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608141520662" />
+    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608223640616" />
   </component>
 </project>
