@@ -19,7 +19,7 @@
     </style>
     <div class="overflow-auto bg-gray-200">
         <ul class="breadcrumb bg-gray-300">
-            <li class="text-orange-500 hover:text-opacity-75">
+            <li class="text-orange-400 hover:text-opacity-75">
                 <a href="{{ route('surveys.show') }}">Surveys</a>
             </li>
             <li class="text-gray-900">{{ $survey->name }} - Survey Questions</li>

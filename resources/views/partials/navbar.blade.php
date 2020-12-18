@@ -31,6 +31,6 @@
         <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('dash') }}">Dashboard</a>
         <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('employees.show') }}">Employees</a>
         <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('surveys.show') }}">Surveys</a>
-        <a class="hover:bg-gray-50 hover:text-gray-600" href="#">Coupons</a>
+        <a class="hover:bg-gray-50 hover:text-gray-600" href="{{ route('coupons.show') }}">Coupons</a>
     </div>
 </header>

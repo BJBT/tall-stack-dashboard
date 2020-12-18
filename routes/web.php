@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ImagePathController;
+use App\Http\Controllers\SurveyCouponsController;
 use App\Http\Controllers\SurveyQuestionChoicesController;
 use App\Http\Controllers\SurveyQuestionsController;
 use App\Http\Controllers\SurveysController;
@@ -78,8 +79,17 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.show');
+    Route::post('/employees/update', [EmployeeController::class, 'update'])->name('employees.update');
+
+    Route::get('/coupons', [SurveyCouponsController::class, 'index'])->name('coupons.show');
+    Route::post('/coupons', [SurveyCouponsController::class, 'store'])->name('coupon.create');
+    Route::post('/coupons/update', [SurveyCouponsController::class, 'update'])->name('coupons.update');
+    Route::get('/coupons/{surveyCoupon}/delete', [SurveyCouponsController::class, 'delete'])->name('coupon.delete');
+
 
     Route::get('/images/message_images/{survey}', [ImagePathController::class, 'get_survey_image'])->name('images.survey_image');
+    Route::get('/images/coupon_images/{surveyCoupon}', [ImagePathController::class, 'get_coupon_image'])->name('images.coupon_image');
+    Route::get('/employees/{employee}/badge', [ImagePathController::class, 'get_badge_image'])->name('badge.image');
 
 
     Route::post('logout', LogoutController::class)

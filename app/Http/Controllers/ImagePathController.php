@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ImagePathController extends Controller
 {
-    public function get_employee_badge(Employee $employee)
+    public function get_badge_image(Employee $employee)
     {
         $path = $employee->badge_image;
         if (!Storage::exists($path))

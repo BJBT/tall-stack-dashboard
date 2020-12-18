@@ -1,26 +1,114 @@
 @extends('layouts.app')
 @section('content')
-    <div class="bg-gray-100 flex flex-col justify-content-cnter min-h-screen sm:px-6 lg:px-8">
-        <div class="flex flex-row flex-wrap">
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">1</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">2</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">3</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">4</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">5</div>
-            <div class="card bg-yellow-500 shadow-lg rounded-lg py-10 px-12 mx-8 my-8">6</div>
+    <div class="overflow-auto bg-gray-200">
+        <div class="flex flex-col bg-white rounded-md shadow-md mb-10 mt-8 mx-8 p-8 overflow-x-auto">
+            <h2 class="flex items-center font-bold text-gray-900 text-xl py-4 mx-4">
+                Coupons
+            </h2>
+            <hr>
+            {{ Form::open(['url'=>route('coupons.update'), 'files'=>true]) }}
+            <table class="table-auto w-full">
+                <thead class="text-sm font-normal text-gray-600 border-b border-gray-200">
+                    <tr>
+                        <th class="px-4 py-4">
+                            Name
+                        </th>
+                        <th class="px-4 py-4">
+                            Description
+                        </th>
+                        <th class="px-4 py-4">
+                            Code
+                        </th>
+                        <th class="px-4 py-4">
+                            Remove
+                        </th>
+                        <th class="px-4 py-4">
+                           Coupon Image
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($coupons as $coupon)
+                        <tr class="border-t border-gray-200 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
+                            <td class="text-right px-4 py-4">
+                                <input class="bg-white border border-gray-300 rounded-md p-2 w-25"
+                                       name="coupons[{{$coupon->id}}][name]"
+                                       type="text"
+                                       value="{{ $coupon->name }}"
+                                >
+                            </td>
+                            <td class="text-right px-4 py-4">
+                                <textarea class="bg-gray-100 border border-gray-300 rounded-md p-2"
+                                          cols="30"
+                                          name="coupons[{{$coupon->id}}][description]"
+                                          rows="10">{{ $coupon->description }}</textarea>
+                            </td>
+                            <td class="text-right px-4 py-4">
+                                <input class="bg-white border border-gray-300 rounded-md p-2 w-25"
+                                       name="coupons[{{$coupon->id}}][code]"
+                                       type="text"
+                                       value="{{ $coupon->code }}"
+                                >
+                            </td>
+                            <td class="px-4 py-4">
+                                <a id="Remove"
+                                   class="text-red-600 hover:text-opacity-75"
+                                   href="{{ route('coupon.delete', [$coupon]) }}">Remove</a>
+                            </td>
+                            <td class="text-left px-4 py-4">
+                                @if($coupon->image_url)
+                                    <img src="{{ route('images.coupon_image', $coupon) }}"
+                                         width="256px"
+                                         alt="">
+                                @endif
+                                <input id="logo"
+                                       accept="image/png, image/jpeg, image/jpg"
+                                       class="py-2 px-2 mt-2 w-10 rounded-md hover:bg-opacity-75 transition ease-out duration-300"
+                                       name="coupons[{{ $coupon->id }}][coupon_image]"
+                                       type="file"
+                                >
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{ Form::submit('Update',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::close() }}
         </div>
-        <div class="card col-1 flex items-center justify-center">
-            <div class="flex flex-col md:flex-row py-2 px-2 space-y-10 justify-content-center">
-                <div class="bg-gray-600 shadow-lg rounded-lg md:mx-2 py-2 px-2 space-y-8">
-                    <a href="{{ route('home') }}">
-                        <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
-                    </a>
-
-                    <h1 class="text-5xl font-extrabold tracking-wider text-center text-gray-400">
-                        Tall Dashboard
-                    </h1>
-                </div>
+        <hr>
+        <div class="flex flex-col bg-white rounded-md shadow-md mb-10 mt-8 mx-8 p-8">
+            <h2 class="flex items-center font-bold text-gray-900 text-xl py-4">
+                Create A Survey
+            </h2>
+            {{ Form::open(['url'=>route('coupon.create'), 'files'=>true, 'enctype'=>"multipart/form-data"]) }}
+            <div>
+                <textarea class="text-md text-gray-600 mb-10 h-20 bg-gray-100 border border-gray-300 w-full rounded-md p-4"
+                          name="name"
+                          placeholder="Name Of Coupon"
+                ></textarea>
             </div>
+            <div>
+                <textarea class="text-md text-gray-600 mb-10 h-40 bg-gray-100 border border-gray-300 w-full rounded-md p-4"
+                          name="description"
+                          placeholder="Description"
+                ></textarea>
+            </div>
+            <div>
+                <input class="text-md text-gray-600 mb-10 h-10 w-10 bg-white border border-gray-300 w-full rounded-md p-4"
+                       name="code"
+                       placeholder="Code"
+                >
+            </div>
+            <p class="text-md text-gray-800 my-2">Coupon Image file</p>
+            <div>
+                <input id="image"
+                       accept="image/png, image/jpeg, image/jpg"
+                       class="text-sm text-gray-600"
+                       name="image_url"
+                       type="file">
+            </div>
+            {{ Form::submit('Add',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
+            {{ Form::close() }}
         </div>
     </div>
 @endsection
