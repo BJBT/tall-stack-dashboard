@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Survey;
 use App\Models\SurveyQuestion;
+use App\Models\SurveyQuestionChoice;
 use App\Models\User;
 use Tests\TestCase;
 
@@ -113,5 +114,65 @@ class SurveysTest extends TestCase
         $question = SurveyQuestion::first();
         $this->assertEquals('New Q', $question->name);
         $this->assertEquals(1, $question->ordinality);
+    }
+
+    /** @test */
+    public function can_create_a_new_survey_question_choice_from_front_end()
+    {
+        $name = 'New Q';
+        $ordinality = 1;
+
+        $survey = Survey::factory()->create();
+        $surveyQuestion = SurveyQuestion::factory()->create([
+            'survey_id' => $survey->id,
+            'name' => 'Question',
+            'surveyquestiontype_id' => 3,
+            'ordinality' => 2
+        ]);
+
+        $this->visitRoute('choices.show', $surveyQuestion);
+        $this->type($name, 'name');
+        $this->type($ordinality, 'ordinality');
+        $this->press('Add');
+        $this->seePageIs(route('choices.show', $surveyQuestion));
+
+        $choice = SurveyQuestionChoice::first();
+        $this->assertEquals('New Q', $choice->name);
+        $this->assertEquals(1, $choice->ordinality);
+    }
+
+    /** @test */
+    public function can_update_a_survey_question_choice_from_front_end()
+    {
+        $old_name = 'Old Q';
+        $old_type = 1;
+        $old_ordinality = 2;
+
+        $new_name = 'New Q';
+        $new_ordinality = 1;
+
+        $survey = Survey::factory()->create();
+        $surveyQuestion = SurveyQuestion::factory()->create([
+            'survey_id' => $survey->id,
+            'name' => $old_name,
+            'surveyquestiontype_id' => $old_type,
+            'ordinality' => $old_ordinality
+        ]);
+        $choice = SurveyQuestionChoice::factory()->create([
+            'survey_question_id' => $surveyQuestion->id,
+            'name' => $old_name,
+            'ordinality' => $old_ordinality
+        ]);
+
+
+        $this->visitRoute('choices.show', $surveyQuestion);
+        $this->type($new_name, "choices[{$choice->id}][name]");
+        $this->type($new_ordinality, "choices[{$choice->id}][ordinality]");
+        $this->press('Update Choices');
+        $this->seePageIs(route('choices.show', $surveyQuestion));
+
+        $choice = SurveyQuestionChoice::first();
+        $this->assertEquals('New Q', $choice->name);
+        $this->assertEquals(1, $choice->ordinality);
     }
 }
