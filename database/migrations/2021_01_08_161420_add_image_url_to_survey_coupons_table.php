@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSurveyCouponsTable extends Migration
+class AddImageUrlToSurveyCouponsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateSurveyCouponsTable extends Migration
      */
     public function up()
     {
-        Schema::create('survey_coupons', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable();
-            $table->string('description')->nullable();
-            $table->string('code');
-            $table->timestamps();
+        Schema::table('survey_coupons', function (Blueprint $table) {
+            $table->string('image_url')->nullable();
         });
     }
 
@@ -29,6 +25,8 @@ class CreateSurveyCouponsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('survey_coupons');
+        Schema::table('survey_coupons', function (Blueprint $table) {
+            //
+        });
     }
 }
