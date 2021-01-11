@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd92d0aa-2be8-4a8f-86c3-3f0923bb07f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tall-stack-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tall-stack-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_173557_create_survey_coupons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_173557_create_survey_coupons_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CouponsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CouponsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +183,19 @@
       <recent name="$PROJECT_DIR$/public/img" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.EmployeesTest">
+  <component name="RunManager" selected="PHPUnit.CouponsTest">
+    <configuration name="CouponsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CouponsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CouponsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CouponsTest.a_user_can_create_a_new_coupon" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CouponsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CouponsTest.php" method="a_user_can_create_a_new_coupon" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CouponsTest.a_user_can_update_a_coupon" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CouponsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CouponsTest.php" method="a_user_can_update_a_coupon" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="EmployeesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\EmployeesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EmployeesTest.php" scope="Class" />
       <method v="2" />
@@ -195,29 +204,17 @@
       <TestRunner class="Tests\Feature\SurveysTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SurveysTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="SurveysTest.can_create_a_new_survey_question_choice_from_front_end" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SurveysTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SurveysTest.php" method="can_create_a_new_survey_question_choice_from_front_end" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SurveysTest.can_update_a_survey_question_choice_from_front_end" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SurveysTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SurveysTest.php" method="can_update_a_survey_question_choice_from_front_end" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SurveysTest.can_update_a_survey_question_from_front_end" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SurveysTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SurveysTest.php" method="can_update_a_survey_question_from_front_end" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CouponsTest" />
+        <item itemvalue="PHPUnit.CouponsTest.a_user_can_update_a_coupon" />
+        <item itemvalue="PHPUnit.CouponsTest.a_user_can_create_a_new_coupon" />
         <item itemvalue="PHPUnit.EmployeesTest" />
         <item itemvalue="PHPUnit.SurveysTest" />
-        <item itemvalue="PHPUnit.SurveysTest.can_update_a_survey_question_choice_from_front_end" />
-        <item itemvalue="PHPUnit.SurveysTest.can_create_a_new_survey_question_choice_from_front_end" />
-        <item itemvalue="PHPUnit.SurveysTest.can_update_a_survey_question_from_front_end" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +228,7 @@
       <updated>1608053659763</updated>
       <workItem from="1608053660823" duration="32913000" />
       <workItem from="1609694660358" duration="8015000" />
-      <workItem from="1610120716932" duration="2027000" />
+      <workItem from="1610120716932" duration="5162000" />
     </task>
     <servers />
   </component>
@@ -263,47 +260,51 @@
       <screen x="-625" y="-1057" width="2560" height="1057" />
     </state>
     <state x="981" y="-785" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608144461902" />
-    <state x="866" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609778399740">
+    <state x="866" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610387418072">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="914" y="-806" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1608305526445" />
     <state x="866" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609778399740" />
-    <state x="866" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.824@0.23.1440.824" timestamp="1608319278802" />
+    <state x="866" y="219" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.824@0.23.1440.824" timestamp="1610387418072" />
     <state x="378" y="354" key="ComposerInitDialogKey" timestamp="1609774199067">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="378" y="354" key="ComposerInitDialogKey/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609774199067" />
-    <state width="1166" height="236" key="GridCell.Tab.0.bottom" timestamp="1609787986115">
+    <state width="1166" height="236" key="GridCell.Tab.0.bottom" timestamp="1610388426604">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.bottom/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986115" />
-    <state width="1166" height="236" key="GridCell.Tab.0.center" timestamp="1609787986114">
+    <state width="1166" height="236" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1610388426604" />
+    <state width="1166" height="236" key="GridCell.Tab.0.center" timestamp="1610388426603">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.center/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986114" />
-    <state width="1166" height="236" key="GridCell.Tab.0.left" timestamp="1609787986112">
+    <state width="1166" height="236" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1610388426603" />
+    <state width="1166" height="236" key="GridCell.Tab.0.left" timestamp="1610388426603">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.left/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986112" />
-    <state width="1166" height="236" key="GridCell.Tab.0.right" timestamp="1609787986114">
+    <state width="1166" height="236" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1610388426603" />
+    <state width="1166" height="236" key="GridCell.Tab.0.right" timestamp="1610388426604">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.right/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986114" />
+    <state width="1166" height="236" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1610388426604" />
     <state x="422" y="168" key="NewPhpClassDialog" timestamp="1608317772316">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="422" y="168" key="NewPhpClassDialog/0.23.1440.824@0.23.1440.824" timestamp="1608317772316" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1610123190439">
-      <screen x="-625" y="-1057" width="2560" height="1057" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1610388411597">
+      <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1610123190439" />
     <state width="500" height="400" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609783146036" />
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.824@0.23.1440.824" timestamp="1608320659846" />
-    <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup" timestamp="1610122467569">
-      <screen x="-625" y="-1057" width="2560" height="1057" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.824@0.23.1440.824" timestamp="1610388411597" />
+    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup" timestamp="1610387879855">
+      <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1610122467569" />
     <state x="159" y="206" width="670" height="527" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609777902050" />
-    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup/0.23.1440.824@0.23.1440.824" timestamp="1608322289059" />
+    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup/0.23.1440.824@0.23.1440.824" timestamp="1610387879855" />
   </component>
 </project>
