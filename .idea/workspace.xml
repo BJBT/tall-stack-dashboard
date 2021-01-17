@@ -21,8 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cd92d0aa-2be8-4a8f-86c3-3f0923bb07f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CouponsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CouponsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +233,8 @@
       <updated>1608053659763</updated>
       <workItem from="1608053660823" duration="32913000" />
       <workItem from="1609694660358" duration="8015000" />
-      <workItem from="1610120716932" duration="5162000" />
+      <workItem from="1610120716932" duration="6646000" />
+      <workItem from="1610730893569" duration="6308000" />
     </task>
     <servers />
   </component>
@@ -270,41 +276,41 @@
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="378" y="354" key="ComposerInitDialogKey/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609774199067" />
-    <state width="1166" height="236" key="GridCell.Tab.0.bottom" timestamp="1610388426604">
+    <state width="1166" height="236" key="GridCell.Tab.0.bottom" timestamp="1610565085420">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.bottom/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986115" />
-    <state width="1166" height="236" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1610388426604" />
-    <state width="1166" height="236" key="GridCell.Tab.0.center" timestamp="1610388426603">
+    <state width="1166" height="236" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1610565085420" />
+    <state width="1166" height="236" key="GridCell.Tab.0.center" timestamp="1610565085419">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.center/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986114" />
-    <state width="1166" height="236" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1610388426603" />
-    <state width="1166" height="236" key="GridCell.Tab.0.left" timestamp="1610388426603">
+    <state width="1166" height="236" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1610565085419" />
+    <state width="1166" height="236" key="GridCell.Tab.0.left" timestamp="1610565085415">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.left/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986112" />
-    <state width="1166" height="236" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1610388426603" />
-    <state width="1166" height="236" key="GridCell.Tab.0.right" timestamp="1610388426604">
+    <state width="1166" height="236" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1610565085415" />
+    <state width="1166" height="236" key="GridCell.Tab.0.right" timestamp="1610565085419">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state width="1166" height="236" key="GridCell.Tab.0.right/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609787986114" />
-    <state width="1166" height="236" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1610388426604" />
+    <state width="1166" height="236" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1610565085419" />
     <state x="422" y="168" key="NewPhpClassDialog" timestamp="1608317772316">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="422" y="168" key="NewPhpClassDialog/0.23.1440.824@0.23.1440.824" timestamp="1608317772316" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1610388411597">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1610912766261">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1610123190439" />
+    <state width="500" height="445" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1610731004169" />
     <state width="500" height="400" key="SwitcherDM/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609783146036" />
-    <state width="500" height="400" key="SwitcherDM/0.23.1440.824@0.23.1440.824" timestamp="1610388411597" />
-    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup" timestamp="1610387879855">
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.824@0.23.1440.824" timestamp="1610912766261" />
+    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup" timestamp="1610389027275">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="-342" y="-822" width="670" height="676" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@-625.-1057.2560.1057" timestamp="1610122467569" />
     <state x="159" y="206" width="670" height="527" key="search.everywhere.popup/-625.-1057.2560.1057/0.23.1440.824@0.23.1440.824" timestamp="1609777902050" />
-    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup/0.23.1440.824@0.23.1440.824" timestamp="1610387879855" />
+    <state x="159" y="206" width="670" height="527" key="search.everywhere.popup/0.23.1440.824@0.23.1440.824" timestamp="1610389027275" />
   </component>
 </project>

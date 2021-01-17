@@ -30,9 +30,9 @@
     <body>
         <div class="h-screen flex overflow-hidden bg-white">
             <div class="flex flex-col w-0 flex-1 overflow-hidden">
-                <div class="flex">
-                    <img class="h-10 mx-2 my-2 px-2 py-2" src="{{asset('fluvvia.png')}}" alt="Fluvvia Cafe and Bar" />
-                </div>
+{{--                <div class="flex">--}}
+{{--                    <img class="h-10 mx-2 my-2 px-2 py-2" src="{{asset('fluvvia.png')}}" alt="Fluvvia Cafe and Bar" />--}}
+{{--                </div>--}}
                 @yield('content')
             </div>
         </div>
