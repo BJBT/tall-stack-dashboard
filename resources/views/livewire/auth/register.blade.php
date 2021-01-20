@@ -1,9 +1,9 @@
 @section('title', 'Create a new account')
 
-<div>
+<div class="mx-8 my-8 py-6 px-6">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <a href="{{ route('home') }}">
-            <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
+            <img class="w-auto h-16 mx-auto text-indigo-600" src="{{asset('fluvvia.png')}}" alt="Fluvvia Cafe and Bar" />
         </a>
 
         <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900 leading-9">
