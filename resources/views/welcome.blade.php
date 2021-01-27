@@ -22,7 +22,7 @@
                             <button type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent shadow-lg rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700">
                                 Purchase Now
                             </button>
-                            <span class="absolute top-0 right-0 px-2 py-1 -mt-3 -mr-6 text-xs font-medium leading-tight text-white bg-green-400 rounded-full">
+                            <span class="absolute top-0 right-0 px-2 py-1 -mt-3 -mr-6 text-xs font-semibold  leading-tight text-white bg-yellow-300 rounded-full">
                                 only $15/mo
                             </span>
                         </span>
