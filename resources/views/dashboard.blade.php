@@ -1,13 +1,11 @@
 @extends('layouts.app')
 @section('content')
     <!--Container-->
-{{--    <div class="container w-full mx-auto pt-10">--}}
+{{--<div class="container w-full mx-auto pt-10">--}}
     <div class="overflow-auto bg-gray-200">
-
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
-            <!--Console Content-->
-
+            <!--Analytics Content-->
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
@@ -104,72 +102,89 @@
             <!--Divider-->
             <hr class="border-b-2 border-gray-400 my-8 mx-4">
 
-            <div class="flex flex-row flex-wrap flex-grow mt-2">
-
+            <div class="flex flex-row flex-wrap flex-grow mt-2" >
+                <!--Graph Card-->
                 <div class="w-full md:w-1/2 p-3">
-                    <!--Graph Card-->
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Total Sales Mo/Mo</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Total Sales Today</h5>
                         </div>
                         <div class="p-5">
-                            <h4>Chart Spot</h4>
+                            <!-- Chart's container -->
+                            <div id="ts_today_chart" style="height: 300px;"></div>
                         </div>
                     </div>
-                    <!--/Graph Card-->
                 </div>
+                <!--/Graph Card-->
 
+                <!--Graph Card-->
                 <div class="w-full md:w-1/2 p-3">
-                    <!--Graph Card-->
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Total Sales mo/mo</h5>
                         </div>
                         <div class="p-5">
-                            <h4>Chart Spot</h4>
+                            <div id="ts_month_chart" style="height: 300px;"></div>
                         </div>
                     </div>
-                    <!--/Graph Card-->
                 </div>
+                <!--/Graph Card-->
 
+                <!--Employee Card-->
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Graph Card-->
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Top Employees</h5>
                         </div>
-                        <div class="p-5">
-                            <h4>Chart Spot</h4>
-                        </div>
+                        @foreach($employees as $employee)
+                            <div class="p-5">
+                                <ul>
+                                    <li>- {{ $employee->name }}</li>
+                                    <li>Sold <span class="font-semibold">{{ $employee->amount_in_cents / 100 }}</span> worth of Merchandise</li>
+                                </ul>
+                            </div>
+                        @endforeach
                     </div>
-                    <!--/Graph Card-->
                 </div>
+                <!--/Employee Card-->
 
+                <!--Customer Card-->
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Graph Card-->
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Top Customers</h5>
                         </div>
+                        @foreach($customers as $customer)
                         <div class="p-5">
-                            <h4>Chart Spot</h4>
+                            <ul>
+                                <li>- {{ $customer->name }}</li>
+                                <li><span class="font-semibold">Spent:</span> {{ $customer->amount_in_cents / 100 }}</li>
+                            </ul>
                         </div>
+                        @endforeach
                     </div>
-                    <!--/Graph Card-->
                 </div>
+                <!--/Customer Card-->
 
-                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-                    <!--Template Card-->
+                <!--Task Card-->
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3 overflow-y-auto">
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
                             <h5 class="font-bold uppercase text-gray-600">Notes / To-Do's</h5>
                         </div>
-                        <div class="p-5">
-
-                        </div>
+                        @foreach($tasks as $task)
+                            <div class="p-2">
+                                <ul>
+                                    <li>- {{ $task->title }}</li>
+                                    <hr>
+                                </ul>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
+                <!--/Task Card-->
             </div>
+
         </div>
     </div>
 @endsection

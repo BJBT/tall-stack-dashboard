@@ -24,7 +24,10 @@
         <!-- Scripts -->
         <script src="{{ url(mix('js/app.js')) }}" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
-
+        <!-- Charting library -->
+        <script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
+        <!-- Chartisan -->
+        <script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -37,6 +40,19 @@
                 @yield('content')
             </div>
         </div>
+
         @livewireScripts
+        <!-- Your application script -->
+        <script>
+            const chart = new Chartisan({
+                el: '#ts_today_chart',
+                url: "@chart('total_sales_chart')",
+            });
+
+            const month_chart = new Chartisan({
+                el: '#ts_month_chart',
+                url: "@chart('total_sales_monthly_chart')",
+            });
+        </script>
     </body>
 </html>
