@@ -20,6 +20,7 @@ class SurveysController extends Controller
     public function update()
     {
         $survey_values = request('survey');
+
         Survey::where('id', '>', 0)->update([
             'is_active' => 0
         ]);

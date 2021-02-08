@@ -7,7 +7,7 @@
             </h2>
             <hr>
             {{ Form::open(['url'=>route('surveys.update'), 'files'=>true]) }}
-            <table class="table-auto w-full">
+            <table class="table-fixed w-full">
                 <thead class="text-sm font-normal text-gray-600 border-b border-gray-200">
                     <tr>
                         <th class="px-4 py-4">
@@ -64,7 +64,7 @@
                                    class="text-red-600 hover:text-opacity-75"
                                    href="{{ route('survey.delete', [$survey]) }}">Remove</a>
                             </td>
-                            <td class="text-right px-4 py-4">
+                            <td class="px-4 py-4">
                                 @if($survey->image_url)
                                     <img src="{{ route('images.survey_image',$survey) }}"
                                          width="256px"
@@ -73,7 +73,7 @@
                                 @endif
                                 <input id="logo"
                                        accept="image/png, image/jpeg, image/jpg"
-                                       class="py-2 px-2 mt-2 w-10 rounded-md hover:bg-opacity-75 transition ease-out duration-300"
+                                       class="text-sm text-gray-600"
                                        name="survey[{{ $survey->id }}][survey_image]"
                                        type="file"
                                 >

@@ -63,7 +63,7 @@
                                 @endif
                                 <input id="logo"
                                        accept="image/png, image/jpeg, image/jpg"
-                                       class="py-2 px-2 mt-2 w-10 rounded-md hover:bg-opacity-75 transition ease-out duration-300"
+                                       class="text-sm text-gray-600"
                                        name="coupons[{{ $coupon->id }}][coupon_image]"
                                        type="file"
                                 >
