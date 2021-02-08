@@ -74,6 +74,10 @@
             </table>
             {{ Form::submit('Update',['class'=>'uppercase bg-gray-500 text-white py-2 px-2 mx-2 my-2 rounded-md hover:bg-opacity-75 transition ease-out duration-300']) }}
             {{ Form::close() }}
+
+            <div class="flex flex-col my-4 mx-4 text-right">
+                {{ $coupons->links() }}
+            </div>
         </div>
         <hr>
         <div class="flex flex-col bg-white rounded-md shadow-md mb-10 mt-8 mx-8 p-8">

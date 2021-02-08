@@ -12,7 +12,7 @@ class SurveysController extends Controller
 {
     public function index()
     {
-        $surveys = Survey::all();
+        $surveys = Survey::paginate(5);
 
         return view('survey', compact('surveys'));
     }

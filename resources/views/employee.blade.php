@@ -85,8 +85,7 @@
             {{ Form::close() }}
 
             <div class="flex flex-col my-4 mx-4 text-right">
-{{--                {{ $employees->render() }}--}}
-{{--                {{ $employees->links() }}--}}
+                {{ $employees->links() }}
             </div>
         </div>
     </div>

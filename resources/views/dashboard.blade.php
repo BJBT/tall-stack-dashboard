@@ -9,7 +9,7 @@
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white rounded-lg shadow-md p-2">
+                    <div class="bg-white rounded-lg shadow-md p-2 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 shadow-lg bg-green-600"><i class="fa fa-wallet fa-lg fa-fw fa-inverse"></i></div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white rounded-lg shadow-md p-2">
+                    <div class="bg-white rounded-lg shadow-md p-2 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 shadow-lg bg-pink-600"><i class="fas fa-users fa-lg fa-fw fa-inverse"></i></div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white rounded-lg shadow-md p-2">
+                    <div class="bg-white rounded-lg shadow-md p-2 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 shadow-lg bg-yellow-600"><i class="fas fa-user-plus fa-lg fa-fw fa-inverse"></i></div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white rounded-lg shadow-md p-2">
+                    <div class="bg-white rounded-lg shadow-md p-2 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 shadow-lg bg-green-600"><i class="fa fa-wallet fa-lg fa-fw fa-inverse"></i></div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white rounded-lg shadow-md p-2">
+                    <div class="bg-white rounded-lg shadow-md p-2 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 shadow-lg bg-pink-600"><i class="fas fa-users fa-lg fa-fw fa-inverse"></i></div>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Metric Card-->
-                    <div class="bg-white rounded-lg shadow-md p-2">
+                    <div class="bg-white rounded-lg shadow-md p-2 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
                         <div class="flex flex-row items-center">
                             <div class="flex-shrink pr-4">
                                 <div class="rounded p-2 shadow-lg bg-indigo-600"><i class="fas fa-tasks fa-lg fa-fw fa-inverse"></i></div>
@@ -107,7 +107,9 @@
                 <div class="w-full md:w-1/2 p-3">
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Total Sales Today</h5>
+                            <h5 class="font-bold uppercase text-gray-600 text-center">
+                                Total Sales Today
+                            </h5>
                         </div>
                         <div class="p-5">
                             <!-- Chart's container -->
@@ -121,7 +123,9 @@
                 <div class="w-full md:w-1/2 p-3">
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Total Sales mo/mo</h5>
+                            <h5 class="font-bold uppercase text-gray-600 text-center">
+                                Total Sales mo/mo
+                            </h5>
                         </div>
                         <div class="p-5">
                             <div id="ts_month_chart" style="height: 300px;"></div>
@@ -134,16 +138,32 @@
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Top Employees</h5>
+                            <h5 class="font-bold uppercase text-gray-600 text-center">
+                                Top Employees
+                            </h5>
                         </div>
-                        @foreach($employees as $employee)
-                            <div class="p-5">
-                                <ul>
-                                    <li>- {{ $employee->name }}</li>
-                                    <li>Sold <span class="font-semibold">{{ $employee->amount_in_cents / 100 }}</span> worth of Merchandise</li>
-                                </ul>
-                            </div>
-                        @endforeach
+                        <div class="p-5">
+                            <table class="table-auto w-full h-full">
+                                <thead class="text-sm font-normal text-gray-600 border-b border-gray-200">
+                                    <tr>
+                                        <th class="">Employee</th>
+                                        <th class="">Amount Sold ($)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($employees as $employee)
+                                    <tr class="border-t border-gray-200 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
+                                        <td class="py-4 px-4">
+                                            {{ $employee->name }}
+                                        </td>
+                                        <td class="py- px-4">
+                                            <span class="text-green-500"> ${{ $employee->amount_in_cents / 100 }}</span>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <!--/Employee Card-->
@@ -152,16 +172,30 @@
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Top Customers</h5>
+                            <h5 class="font-bold uppercase text-gray-600 text-center">
+                                Top Customers
+                            </h5>
                         </div>
-                        @foreach($customers as $customer)
-                        <div class="p-5">
-                            <ul>
-                                <li>- {{ $customer->name }}</li>
-                                <li><span class="font-semibold">Spent:</span> {{ $customer->amount_in_cents / 100 }}</li>
-                            </ul>
-                        </div>
-                        @endforeach
+                        <table class="table-auto w-full h-full">
+                            <thead class="text-sm font-normal text-gray-600 border-b border-gray-200">
+                                <tr>
+                                    <th class="">Customer</th>
+                                    <th class="">Amount Spent ($)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($customers as $customer)
+                                <tr class="border-t border-gray-200 text-sm text-gray-600 bg-transparent hover:bg-orange-100 transition ease-out duration-300">
+                                        <td class="py-4 px-4">
+                                            {{ $customer->name }}
+                                        </td>
+                                        <td class="py- px-4">
+                                            <span class="text-green-500"> ${{ $customer->amount_in_cents / 100 }}</span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <!--/Customer Card-->
@@ -170,7 +204,9 @@
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3 overflow-y-auto">
                     <div class="bg-white border rounded shadow">
                         <div class="border-b p-3">
-                            <h5 class="font-bold uppercase text-gray-600">Notes / To-Do's</h5>
+                            <h5 class="font-bold uppercase text-gray-600 text-center">
+                                Notes / To-Do's
+                            </h5>
                         </div>
                         @foreach($tasks as $task)
                             <div class="p-2">

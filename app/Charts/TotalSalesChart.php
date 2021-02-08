@@ -18,8 +18,8 @@ class TotalSalesChart extends BaseChart
     public function handler(Request $request): Chartisan
     {
         return Chartisan::build()
-            ->labels(['First', 'Second', 'Third'])
-            ->dataset('Sample', [1, 2, 3])
-            ->dataset('Sample 2', [3, 2, 1]);
+            ->labels(['Q1', 'Q2', 'Q3', 'Q4'])
+            ->dataset('Sample', [1, 2, 3, 4])
+            ->dataset('Sample 2', [4, 3, 2, 1]);
     }
 }

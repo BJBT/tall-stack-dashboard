@@ -10,7 +10,7 @@ class SurveyCouponsController extends Controller
 {
     public function index()
     {
-        $coupons = SurveyCoupon::all();
+        $coupons = SurveyCoupon::paginate(10);
 
         return view('survey_coupon', compact('coupons'));
     }
